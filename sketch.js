@@ -1,17 +1,22 @@
 var angle = 0;
 
 function    setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
     slider = createSlider(0, TWO_PI, PI / 4, 0.001);
 }
+
+function windowResized() { 
+    resizeCanvas(windowWidth, windowHeight);
+ }
 
 function    draw() {
     background(51);
 
-    translate(200, height);
+    translate(200, windowHeight);
     angle = slider.value();
     stroke(255);
-    branch(100);
+    branch(60);
+    branch(45)
 }
 
 function    branch(len) {
