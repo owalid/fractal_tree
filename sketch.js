@@ -3,6 +3,7 @@ var angle = 0;
 function    setup() {
     createCanvas(windowWidth, windowHeight);
     slider = createSlider(0, TWO_PI, PI / 4, 0.001);
+    slider.position(windowWidth * 0.5, windowHeight * 0.5);
 }
 
 function windowResized() { 
